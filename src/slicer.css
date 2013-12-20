@@ -1,0 +1,33 @@
+
+body{
+	font-family: 'Cabin', sans-serif;
+	font-weight: 600;
+	overflow: auto;
+	resize: both;
+}
+
+#triggermail{
+	font-size: 40px;
+}
+
+#main{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	margin-left: 250px;
+	margin-right: 250px;
+}
+
+.blocks{
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+textArea{
+	resize: none;
+	border: solid 3px #B56C91;
+	outline: none;
+}
+
+.buttons{
+	text-align: center;
+}
