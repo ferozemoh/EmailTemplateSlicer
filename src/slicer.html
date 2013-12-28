@@ -1,8 +1,9 @@
 <html>
 	<head>
-		<script src="slicer.js" type="text/javascript"></script>
+		<script type="text/javascript" src="slicer.js" canvas="myCanvas"></script>
 		<script type = 'text/javascript' src="jquery-2.0.3.min.js"></script>
-		<script type="text/javascript" src = "js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="paper.js"></script>
 		<link rel="stylesheet" type="text/css" href="slicer.css">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
@@ -25,18 +26,18 @@
 			
 			<div class = "buttons">
 				
-				<button id = "horizontal" type="button" class="btn btn-sm btn-primary" onclick = "changeRuler">
+				<button id = "horizontal" type="button" class="btn btn-sm btn-primary">
     				<span class="glyphicon glyphicon-resize-horizontal"></span>
 				</button>
 
-				<button id = "vertical" type="button" class="btn btn-sm btn-danger" onclick = "changeRuler">
+				<button id = "vertical" type="button" class="btn btn-sm btn-danger">
   					<span class="glyphicon glyphicon-resize-vertical"></span>
 				</button>
 			</div>
 
 			<div class = "blocks">
 				<br/>
-				<canvas id = "canvas"></canvas>
+				<canvas id="myCanvas" width="700" height="1100"></canvas>
 			</div>
 
 		</div>
