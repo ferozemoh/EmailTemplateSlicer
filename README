@@ -9,6 +9,8 @@ Up to date functionality
 	render the image onto the slicing area. When the user right clicks on any 
 	point in the slicing area, a horizontal line is drawn at that point.
 
+	Javascript library Paper is used for all things related to drawing.
+
 Note
 =====
 	paper.js has some issues with chrome where it doesn't work when if you try to run it locally.
