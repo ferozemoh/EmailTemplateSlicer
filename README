@@ -13,5 +13,5 @@ Javascript library Paper is used for all things related to drawing.
 
 Note
 =====
-paper.js has some issues with chrome where it doesn't work when if you try to run it locally. You can use a webserver program like mongoose to set up a webserver and run it from
+paper.js has some issues with chrome where it doesn't work when if you try to run it locally.You can use a webserver program like mongoose to set up a webserver and run it from
 there. You can also use firefox to run it locally on your machine. 
