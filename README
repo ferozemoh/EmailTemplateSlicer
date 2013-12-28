@@ -3,15 +3,13 @@ Email Template Slicer
 
 An Email Template Slicer that helps create custom layouts for marketing emails.
 
-Up to date functionality
+You can try it out here: http://ferozemoh.github.io/
+
+Current functionality
 ======================== 
 The user can provide a url for the image in the textbox and click submit to 
 render the image onto the slicing area. When the user right clicks on any 
 point in the slicing area, a horizontal line is drawn at that point.
 
-Javascript library Paper is used for all things related to drawing.
+Javascript library Paper.js is used for all things related to drawing.
 
-Note
-=====
-paper.js has some issues with chrome where it doesn't work when if you try to run it locally.You can use a webserver program like mongoose to set up a webserver and run it from
-there. You can also use firefox to run it locally on your machine. 
