@@ -1,15 +1,46 @@
+var lines;
+var selected = false;
+var selectedLoc;
 window.onload = function(){
 	var tool = new paper.Tool();
+	lines = [];
 	
 	//draw a new line on template when clicked
 	tool.onMouseDown = function(event){
-		var point = new paper.Point(0,event.point.y);
-		var canvas = $('#myCanvas')[0]; 
-		var size = new paper.Size(1100, 2);
-		var path = new paper.Path.Rectangle(point, size);
-		path.strokeColor = 'red';
-		path.fillColor = 'red';
-		paper.view.draw();
+		var draw = true;
+		if(selected){
+			//if a line is already selected, change its location
+			//when clicked on another point
+			lines[selectedLoc].position.y = event.point.y
+			selected = false;
+			lines[selectedLoc].strokeColor = 'purple';
+			lines[selectedLoc].fillColor = 'purple';
+		}else{
+			//loop through the lines array to check if the clicked 
+			//point is on a line
+			for(var i=0;i<lines.length;i++){
+				var currentLine = lines[i];
+				if(currentLine.contains(event.point.y)){
+					//line already exists
+					currentLine.strokeColor = 'blue';
+					currentLine.fillColor = 'blue';
+					draw = false; //no need to draw a line
+					selected = true; // a line is selected
+					selectedLoc = i;
+					break;
+				}	
+			}	
+			if(draw){
+				//draw the line since it doesn't exist
+				var point = new paper.Point(0,event.point.y);
+				var size = new paper.Size(1100, 4);
+				var path = new paper.Path.Rectangle(point, size);
+				path.strokeColor = 'purple';
+				path.fillColor = 'purple';
+				lines.push(path);
+				paper.view.draw();
+			}
+		}
 	}
 }
 
